@@ -1,7 +1,12 @@
 #!/bin/bash
-
-STATES=(S1 S2 S3)
-VARIABLES=(V1 V2 V3)
+if [ $# == 2 ]
+then
+    STATES=(`echo $1 | tr ',' ' '`)
+    VARIABLES=(`echo $2 | tr ',' ' '`)
+else
+    STATES=(S1 S2 S3)
+    VARIABLES=(V1 V2 V3)
+fi
 
 CLK_NAME=clk
 RST_NAME=rst
