@@ -17,10 +17,12 @@ VAR_NUMBERS=${#VARIABLES[*]}
 
 
 i=0
+j=1
 while(($i < $STATE_NUMBER))
 do
-    echo "    localparam ${STATES[i]} = ${STATE_NUMBER}'d${i};"
+    echo "    localparam ${STATES[i]} = ${STATE_NUMBER}'d${j};"
     let "i++"
+    let "j*=2"
 done
 echo ""
 
