@@ -59,7 +59,7 @@ do
     echo "        ${VARIABLES[i]} = 0;"
     let "i++"
 done
-echo "        next_state = state"
+echo "        next_state = state;"
 echo "        case(state)"
 
 
